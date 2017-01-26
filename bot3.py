@@ -10,7 +10,7 @@ def train():
 def seq2seq_f(encoder_inputs, decoder_inputs, do_decode):
 	return tf.nn.seq2seq.embedding_attention_seq2seq(
 		encoder_inputs, decoder_inputs, cell,
-		num_encoder_symbols=source_vocab_size
+		num_encoder_symbols=source_vocab_size,
 		num_decoder_symbols=target_vocab_size,
 		embedding_size=size,
 		output_projection=output projection,
